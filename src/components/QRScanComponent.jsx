@@ -62,7 +62,6 @@ export default function QRScanComponent(props) {
   }, []);
   return (
     <div id="container">
-      <h1>QR Code Scanner</h1>
 
       <a id="btn-scan-qr">
       </a>
