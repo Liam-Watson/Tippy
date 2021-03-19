@@ -1,11 +1,11 @@
 @media (max-width: 992px){
-  .primaryContentArea{
-    background-image: url('volunteers.png');
+  .homeDefault{
+    background-image: url('volunteers.jpg');
   }
 }
 
 @media (min-width: 992px){
-  .primaryContentArea{
+  .homeDefault{
     background-image: url('volunteers_wide.png');
   }
 }
@@ -38,8 +38,6 @@
 }
 
 .primaryContentArea{
-background-size:cover;
-background-position: center;
 display: grid;
   position: relative;
   justify-content: center;
@@ -47,8 +45,9 @@ display: grid;
 }
 
 .homeDefault{
+  background-size: cover;
+  background-position: center;
   position: absolute;
-  z-index: 1;
   height: 100%;
 width:100%;
 display:flex;
@@ -58,10 +57,8 @@ justify-content: center;
 
 .homeMoreInfo{
   position: absolute;
-  z-index: 0;
   height: 100%;
   width:100%;
-  visibility: hidden;
   background-color: white;
 }
 
@@ -95,24 +92,116 @@ height: 12vh;
 
 .paymentScreen1{
   position: absolute;
-  z-index: 0;
   height: 100%;
-  width:100%;
-  visibility: hidden;
-  background-color: white;
-  display: grid;
-justify-content: center;
-align-items: center;
-font-size: 20px;
-text-align: center;
+  width:100%;  
 }
 
+.paymentPageDiv1{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentPageDiv2{
+background-color: var(--SweatyMainColor);
+color: var(--SweatyContrastColor);
+height: 85%;
+border-top-right-radius: 50px;
+border-top-left-radius: 50px;
+display: grid;
+justify-content: center;
+align-items: center;
+text-align: center;
+max-width: 500px;
+margin:auto;
+overflow: auto;
+}
+
+.paymentAmountDiv1{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentAmountDiv2{
+  background-color: var(--SweatyMainColor);
+  color: var(--SweatyContrastColor);
+  height:85%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin:auto;
+  overflow: auto;
+}
+
+.paymentButton{
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.quickPaymentButton{
+  background-color: rgb(41, 71, 128);
+  border-color: white;
+  border-width: 2px;
+  margin-right: 10px;
+  width:60px;
+  height:60px;
+  padding: 10px 0px 10px 0px;
+  border-radius: 500px;
+}
+
+.quickPaymentButton:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(255, 174, 0);
+}
+
+.QRArea{
+height:250px;
+background-color: rgb(54, 54, 54);
+display: grid;
+justify-content: center;
+align-items: center;
+margin: 0px 10px 0px 10px;
+}
+
+.manualEntry{
+font-size: 11px;
+margin:15px 0px 15px 0px;
+padding: 0px 0px 0px 0px;
+border:none;
+text-decoration: underline;
+height:10px;
+}
+.manualEntry:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input{
+  height:30px;
+  width: 200px;
+  font-family: var(--SweatyFontBold);
+  text-align: center;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: white;
+}
+
+.capitalize{
+  text-transform: uppercase;
+}
 .collectionScreen1{
   position: absolute;
-  z-index: 0;
   height: 100%;
   width:100%;
-  visibility: hidden;
   background-color: white;
   display: grid;
 justify-content: center;
@@ -121,15 +210,7 @@ font-size: 20px;
 text-align: center;
 }
 
-.sourceAndContactInfo{
-  color: var(--SweatyContrastColor);
-  background-color: var(--SweatyMainColor);
-  padding: 10px 0px 10px 0px;
-  text-align: center;
-  font-family: var(--SweatyFontBold);
-  line-height: 150%;
-  letter-spacing: 1px;
-}
+
 a{
   color:var(--SweatyContrastColor);
 }
