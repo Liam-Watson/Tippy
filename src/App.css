@@ -1,38 +1,153 @@
-.App {
+@media (max-width: 992px){
+  .primaryContentArea{
+    background-image: url('volunteers.png');
+  }
+}
+
+@media (min-width: 992px){
+  .primaryContentArea{
+    background-image: url('volunteers_wide.png');
+  }
+}
+
+@font-face{
+  font-family: "Coves";
+  src: url("Coves Light.otf");
+}
+
+@font-face{
+  font-family: "CovesBold";
+  src: url("Coves Bold.otf");
+}
+
+:root {
+  --SweatyMainColor: rgb(55, 55, 161);
+  --SweatyContrastColor: white;
+  --SweatyFontBold: "CovesBold";
+  --SweatyFont: "Coves";
+}
+
+.pageTitle{
+  color: var(--SweatyContrastColor);
+  padding: 30px 0px 30px 0px;
   text-align: center;
+  font-family: var(--SweatyFontBold);
+  letter-spacing: 2px;
+  font-size: clamp(20px,4vw,32px);
+  background-color: var(--SweatyMainColor);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.primaryContentArea{
+background-size:cover;
+background-position: center;
+display: grid;
+  position: relative;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.homeDefault{
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+width:100%;
+display:flex;
+justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homeMoreInfo{
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width:100%;
+  visibility: hidden;
+  background-color: white;
+}
+
+.homeMoreInfoDiv1{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.homeMoreInfoDiv2{
+background-color: var(--SweatyMainColor);
+color: var(--SweatyContrastColor);
+height:85%;
+border-top-right-radius: 50px;
+border-top-left-radius: 50px;
+display: grid;
+justify-content: center;
+align-items: center;
+text-align: center;
+max-width: 500px;
+margin:auto;
+overflow: auto;
+}
+
+.homeMoreInfoDiv2Img{
+  padding-top: 10px;
+height: 12vh;
+}
+
+.paymentScreen1{
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width:100%;
+  visibility: hidden;
+  background-color: white;
+  display: grid;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+text-align: center;
+}
+
+.collectionScreen1{
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width:100%;
+  visibility: hidden;
+  background-color: white;
+  display: grid;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+text-align: center;
+}
+
+.sourceAndContactInfo{
+  color: var(--SweatyContrastColor);
+  background-color: var(--SweatyMainColor);
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  font-family: var(--SweatyFontBold);
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+a{
+  color:var(--SweatyContrastColor);
+}
+
+button{
+background-color: var(--SweatyMainColor);
+color: var(--SweatyContrastColor);
+font-family: var(--SweatyFontBold);
+font-size: clamp(14px,4vw,18px);
+border-radius:10px;
+border-width: 0px;
+padding: 15px 20px 15px 20px;
+letter-spacing: 1px;
+}
+
+p{
+  padding: 0px 30px 0px 30px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  max-width: 400px;
 }
