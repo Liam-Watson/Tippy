@@ -45,9 +45,9 @@ export default function PaymentPage(props) {
   const HeadingToShow = () => {
     switch (defaultScreen) {
       case 0:
-        return "Please scan a QR code below to continue.";
+        return "Scan a QR code below to continue.";
       case 1:
-        return "Please enter a beneficiary number below to continue.";
+        return "Please enter a beneficiary phone number below to continue.";
       case 2:
         break;
       case 3:
@@ -58,11 +58,29 @@ export default function PaymentPage(props) {
         return "Please scan a QR code below to continue.";
     }
   };
+ 
 
+  const headingToShow= () => {
+    switch (defaultScreen) {
+      case 0:
+        return "Please select a beneficiary";
+      case 1:
+        return "Please select a beneficiary";
+      case 2:
+        return "Payment confirmation";
+      case 3:
+        return "Please select an amount ";
+      case 4:
+        return "Please select an amount ";
+      default:
+        return "I want to enter a beneficiary number manually";
+    }
+  }
+  
   const subTextToShow = () => {
     switch (defaultScreen) {
       case 0:
-        return "I want to enter a beneficiary number manually";
+        return "I want to enter a beneficiary phone number manually";
       case 1:
         return "I want to scan a QR code";
       case 2:
@@ -79,7 +97,7 @@ export default function PaymentPage(props) {
   return (
     <div id="paymentScreen1Div" className="paymentScreen1">
       <div className="paymentPageDiv1">
-        <h3>Please select a beneficiary</h3>
+        <h3>{headingToShow()}</h3>
       </div>
       <div className="paymentPageDiv2">
         <div>

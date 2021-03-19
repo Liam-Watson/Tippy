@@ -6,7 +6,7 @@ export default function PaymentConfirmation(props) {
   return (
     <div id="paymentScreen1Div" className="paymentScreen1">
       <div className="homeMoreInfoDiv1">
-        <h3>Payment Confirmation</h3>
+        
       </div>
       <div className="homeMoreInfoDiv2">
         <div>

@@ -10,6 +10,7 @@ export default function ManualBeneficiary(props) {
         maxLength={10}
       ></input>
       <br />
+      <br></br>
       {/*TODO: SHould this "code" just be the phone number?*/}
       <button className="paymentButton" onClick={() => props.setNextPage(3)}>
         Proceed{" "}
