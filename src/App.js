@@ -8,6 +8,9 @@ import ClientPage from "./components/ClientPage";
 import HomeMoreInfo from "./components/HomeMoreInfo";
 import PaymentAmount from "./components/paymentAmount";
 import PaymentConfirmation from "./components/paymentConfirmation";
+import SignUpPage from './components/SignUpPage.jsx';
+import RetrieveQRCode from './components/RetrieveQRCode';
+
 
 window.onload = window.onresize = function () {
   var header = document.getElementById("Header");
@@ -31,6 +34,7 @@ function App() {
   const paymentAmtCallBack = () => {
     setValue(5);
   }
+
 
   const screenToShow = () => {
     switch (value) {
@@ -59,6 +63,8 @@ function App() {
     return 1;
     case 5:
     return 1;
+    case 6:
+      return 2;
     default:
       return value;
   

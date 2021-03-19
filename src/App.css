@@ -28,6 +28,7 @@
 }
 
 .pageTitle{
+  z-index: 10;
   color: var(--SweatyContrastColor);
   padding: 20px 0px 20px 0px;
   text-align: center;
@@ -35,6 +36,7 @@
   letter-spacing: 2px;
   font-size: clamp(28px,4vw,34px);
   background-color: var(--SweatyMainColor);
+  box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.226);
 }
 
 .primaryContentArea{
@@ -97,6 +99,7 @@ height: 12vh;
 }
 
 .clientScreen1{
+
   position: absolute;
   height: 100%;
   width:100%;  
@@ -123,6 +126,7 @@ height: 12vh;
 }
 
 .paymentPageDiv2{
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.226);
 background-color: var(--SweatyMainColor);
 color: var(--SweatyContrastColor);
 height: 85%;
@@ -146,6 +150,7 @@ width:300px;
 }
 
 .clientPageDiv2{
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.226);
   background-color: var(--SweatyMainColor);
   color: var(--SweatyContrastColor);
   height: 85%;
@@ -215,12 +220,13 @@ margin: 0px 10px 0px 10px;
 }
 
 .manualEntry{
+  box-shadow: none;
 font-size: 11px;
-margin:15px 0px 15px 0px;
+margin:12px 0px 12px 0px;
 padding: 0px 0px 0px 0px;
 border:none;
 text-decoration: underline;
-height:10px;
+height:12px;
 }
 .manualEntry:focus {
   outline: none;
@@ -258,6 +264,7 @@ a{
 }
 
 button{
+  box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.226);
 background-color: var(--SweatyMainColor);
 color: var(--SweatyContrastColor);
 font-family: var(--SweatyFontBold);
@@ -273,4 +280,14 @@ p{
   line-height: 140%;
   letter-spacing: 1px;
   max-width: 400px;
+}
+
+.backButton{
+  position: absolute;
+  visibility: hidden;
+  background-color: var(--SweatyMainColor);
+  height:41px;
+  padding:0px 10px 5px 10px;
+  left: 30px;
+  font-size: 40px;
 }
