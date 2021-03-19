@@ -15,17 +15,19 @@ export default function PaymentPage(props) {
     setValue(2);
   }
 
+  const backCall =() =>{
+    setValue(0);
+  }
+
+
 function ScreentoShow(){
  switch(value){
    case 0: 
-   document.getElementById("back").style.visibility="hidden";
    return  <ClientStartPage QRCallBackFn={()=>qrCallBack()} BeneficiaryCallBackFn={()=>benCallBack()}></ClientStartPage>;
    case 1:
-    document.getElementById("back").style.visibility="visible";
-     return <SignUpPage></SignUpPage>;
+     return <SignUpPage BackFn={()=>backCall()}></SignUpPage>;
    case 2:
-    document.getElementById("back").style.visibility="visible";
-     return <RetrieveQRCode></RetrieveQRCode>;
+     return <RetrieveQRCode BackFn={()=>backCall()}></RetrieveQRCode>;
    default:
     return  <ClientStartPage QRCallBackFn={()=>qrCallBack()} BeneficiaryCallBackFn={()=>benCallBack()}></ClientStartPage>;
  }
@@ -34,16 +36,7 @@ function ScreentoShow(){
   return (
 
     <div id="clientScreen1Div" className="clientScreen1">
-      <div className="clientPageDiv1">
-     <button onClick={()=>setValue(0)} id="back" className="backButton">{'<'}</button>   <h3>Please select an option</h3>
-      </div>
-      <div className="clientPageDiv2">
-        <div>
-          {ScreentoShow()}
-        
-       
-     </div>
-      </div>
+    {ScreentoShow()}
    
     </div>
 
