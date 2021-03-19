@@ -48,8 +48,6 @@ function App() {
         return <HomeMoreInfo />;
         case 4:
         return <PaymentAmount paymentAmtCallBackFn={paymentAmtCallBack}/>;
-        case 5:
-          return <PaymentConfirmation />;
       default:
         return <HomePage infoCallBackFn={infoCallBack} />;
     }

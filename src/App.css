@@ -228,6 +228,25 @@ border:none;
 text-decoration: underline;
 height:12px;
 }
+/*
+TODO: FIX THIS TEXT BOX
+*/
+.manualEntryQuickyPay{
+  box-shadow: none;
+font-size: 11px;
+margin:12px 0px 12px 0px;
+padding: 0px 0px 0px 0px;
+border:none;
+text-decoration: underline;
+height:12px;
+width:90vw;
+}
+
+.manualEntryQuickyPay:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .manualEntry:focus {
   outline: none;
   box-shadow: none;

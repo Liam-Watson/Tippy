@@ -16,7 +16,8 @@ export default function QRScanComponent(props) {
 
     qrcode.callback = (res) => {
       if (res) {
-        console.log(res);
+        props.setQrScan(res);
+        props.setScreenValue(3);
         outputData.innerText = res;
         scanning = false;
         video.srcObject.getTracks().forEach((track) => {
