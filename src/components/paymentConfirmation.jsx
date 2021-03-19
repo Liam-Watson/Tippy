@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-// import Yoco from "./yocopayment";
+import Yoco from "./yocopayment";
 
 export default function PaymentConfirmation() {
   return (
@@ -15,7 +15,7 @@ export default function PaymentConfirmation() {
         <p>
          You're about to pay R27.99 to Godfree Williams <br></br>(Beneficiary #VJQ29).
         </p>
-        {/* <Yoco></Yoco> */}
+         <Yoco></Yoco> 
       </div>
       </div>
      

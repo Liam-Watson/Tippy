@@ -29,11 +29,11 @@
 
 .pageTitle{
   color: var(--SweatyContrastColor);
-  padding: 30px 0px 30px 0px;
+  padding: 20px 0px 20px 0px;
   text-align: center;
   font-family: var(--SweatyFontBold);
   letter-spacing: 2px;
-  font-size: clamp(20px,4vw,32px);
+  font-size: clamp(28px,4vw,34px);
   background-color: var(--SweatyMainColor);
 }
 
@@ -219,7 +219,7 @@ button{
 background-color: var(--SweatyMainColor);
 color: var(--SweatyContrastColor);
 font-family: var(--SweatyFontBold);
-font-size: clamp(14px,4vw,18px);
+font-size: clamp(18px,4vw,22px);
 border-radius:10px;
 border-width: 0px;
 padding: 15px 20px 15px 20px;

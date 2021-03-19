@@ -69,7 +69,7 @@ function App() {
     <div className="App">
       {/* Header code: start */}
       <div id="Header">
-        <div className="pageTitle">PayMe App</div>
+        <div className="pageTitle">Tippy</div>
       </div>
       {/* Header code: end */}
       {/* Body code: start */}
@@ -92,7 +92,7 @@ function App() {
             onClick={() => setValue(1)}
           />
           <BottomNavigationAction
-            label="Collection"
+            label="Account"
             icon={<AccountBalance />}
             onClick={() => setValue(2)}
           />
