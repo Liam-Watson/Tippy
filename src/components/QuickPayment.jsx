@@ -14,10 +14,13 @@ export default function QuickPayment(props) {
       <button onClick={() => props.setMoney(10)} className="quickPaymentButton">R{PAY10}</button>
       <button onClick={() => props.setMoney(20)} className="quickPaymentButton">R{PAY20}</button>
       <button onClick={() => props.setMoney(50)} className="quickPaymentButton">R{PAY50}</button><br></br>
-      <button onClick={() => props.setNextPage(4)} className="manualEntryQuickyPay"/>
+      <button onClick={() => props.setNextPage(4)} className="manualEntryQuickyPay">I want to choose a custom amount</button>
       <button className="paymentButton" onClick={() => {props.setNextPage(2)}}>
-            Proceed{" "}
+            Proceed
           </button>
+          <button onClick={()=>props.setNextPage(0)} id="back" className="backButton">
+          {"< Back"}
+        </button>
     </div>
   );
 }

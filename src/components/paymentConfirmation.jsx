@@ -5,6 +5,9 @@ import Yoco from "./yocopayment";
 export default function PaymentConfirmation(props) {
   return (
     <div id="paymentScreen1Div" className="paymentScreen1">
+         <button onClick={()=>props.setNextPage(3)} id="back" className="backButton">
+          {"< Back"}
+        </button>
       <div className="homeMoreInfoDiv1">
         
       </div>

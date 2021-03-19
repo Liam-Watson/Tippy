@@ -26,15 +26,17 @@ export default function SignUpPage(props) {
   return (
     <div className="clientStartPageCont">
       <div className="clientPageDiv1">
-        <button onClick={props.BackFn} id="back" className="backButton">
-          {"<"}
-        </button>
+    
         <h3>Please sign up below</h3>
       </div>
       <div className="clientPageDiv2">
+ 
         <div>
           <div>
-            <div>{QR}</div>
+          <button onClick={props.BackFn} id="back" className="backButton">
+          {"< Back"}
+        </button>
+            <div className="AccountSignUp">{QR}</div>
           </div>
         </div>
       </div>

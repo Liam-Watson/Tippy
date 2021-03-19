@@ -4,6 +4,9 @@ import "../App.css";
 export default function ManualBeneficiary(props) {
   return (
     <div>
+      <button onClick={()=>props.setNextPage(0)} id="back" className="backButton">
+          {"< Back"}
+        </button>
       <input
         placeholder="0833571821"
         className="capitalize"

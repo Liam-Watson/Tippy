@@ -41,6 +41,7 @@ export default function PaymentAmount(props) {
   return (
     <div id="homeMoreInfoDiv" className="homeMoreInfo">
       <div className="paymentAmountDiv1">
+
         <h3>Please enter payment amount</h3>
       </div>
       <div className="paymentAmountDiv2" id="paymentAmountDiv2ID">

@@ -20,7 +20,7 @@ function helperFn(yoco) {
     yoco.showPopup({
       amountInCents: 2799,
       currency: "ZAR",
-      name: "Tippy",
+      name: ": Tippy payment",
       description: "Cashless Payments - made simple.",
       callback: function (result) {
         // This function returns a token that your server can use to capture a payment

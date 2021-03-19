@@ -27,7 +27,7 @@ export default function RetrieveQRCode(props) {
     <div className="clientStartPageCont">
       <div className="clientPageDiv1">
         <button onClick={props.BackFn} id="back" className="backButton">
-          {"<"}
+          {"< Back"}
         </button>
         <h3>Please sign up below</h3>
       </div>

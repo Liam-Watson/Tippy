@@ -32,7 +32,7 @@ export default function PaymentPage(props) {
       case 1:
         return <ManualBeneficiary setNextPage={setValue} />;
       case 2:
-        return <PaymentConfirmation money={money}/>;
+        return <PaymentConfirmation setNextPage={setValue}  money={money}/>;
       case 3:
         return <QuickPayment setMoney={setMoney} setNextPage={setValue} />;
       case 4:
@@ -51,9 +51,9 @@ export default function PaymentPage(props) {
       case 2:
         break;
       case 3:
-        break;
+        return "Please choose from one of the  quick payment amounts below";
       case 4:
-        break;
+        return "Please  enter a payment amount below";
       default:
         return "Please scan a QR code below to continue.";
     }
@@ -82,7 +82,7 @@ export default function PaymentPage(props) {
       case 0:
         return "I want to enter a beneficiary phone number manually";
       case 1:
-        return "I want to scan a QR code";
+       break;
       case 2:
         break;
       case 3:
@@ -97,10 +97,12 @@ export default function PaymentPage(props) {
   return (
     <div id="paymentScreen1Div" className="paymentScreen1">
       <div className="paymentPageDiv1">
+      
         <h3>{headingToShow()}</h3>
       </div>
       <div className="paymentPageDiv2">
         <div>
+          <br></br><br></br>
           <p>{HeadingToShow()}</p>
 
           {screenToShow()}

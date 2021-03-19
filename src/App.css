@@ -227,6 +227,7 @@ margin: 0px 10px 0px 10px;
 }
 
 .manualEntry{
+
   box-shadow: none;
 font-size: 11px;
 margin:12px 0px 12px 0px;
@@ -239,9 +240,10 @@ height:12px;
 TODO: FIX THIS TEXT BOX
 */
 .manualEntryQuickyPay{
+  color:white;
   box-shadow: none;
-font-size: 11px;
-margin:12px 0px 12px 0px;
+font-size: 14px;
+margin:12px 0px 22px 0px;
 padding: 0px 0px 0px 0px;
 border:none;
 text-decoration: underline;
@@ -310,11 +312,15 @@ p{
 
 .backButton{
   position: absolute;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
   background-color: var(--SweatyMainColor);
-  height:41px;
-  padding:0px 10px 5px 10px;
-  left: 30px;
-  font-size: 40px;
+  height:30px;
+  padding:0px 10px 0px 10px;
+  left: 5px;
+  bottom:15px;
+  font-size: 15px;
 }
 
 /* QR Section*/
@@ -367,3 +373,4 @@ h1 {
 }
 
 /* QR Section*/
+

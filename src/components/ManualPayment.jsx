@@ -14,7 +14,7 @@ export default function ManualPayment(props) {
         placeholder="R 0"
         onValueChange={(value, name) => props.setMoney(value)}
       />
-      <br></br>
+      <br></br><br></br>
       <button className="paymentButton" onClick={() => props.setNextPage(2)}>
         Proceed{" "}
       </button>
