@@ -96,11 +96,30 @@ height: 12vh;
   width:100%;  
 }
 
+.clientScreen1{
+  position: absolute;
+  height: 100%;
+  width:100%;  
+}
+
 .paymentPageDiv1{
   height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.clientPageDiv1{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientButtonTitles{
+  font-size:clamp(18px,4vw,22px);
+  padding: 25px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .paymentPageDiv2{
@@ -117,6 +136,29 @@ max-width: 500px;
 margin:auto;
 overflow: auto;
 }
+
+.clientButton{
+border-color: var(--SweatyContrastColor);
+border-width: 1px;
+border-style:solid;
+margin-top: 25px;
+width:300px;
+}
+
+.clientPageDiv2{
+  background-color: var(--SweatyMainColor);
+  color: var(--SweatyContrastColor);
+  height: 85%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin:auto;
+  overflow: auto;
+  }
 
 .paymentAmountDiv1{
   height: 15%;

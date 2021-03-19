@@ -17,7 +17,7 @@ export default function HomeMoreInfo() {
             PayMe App allows for quick and easy cashless payments. Anywhere.
             Anytime. To get started with a payment, simply click on the "Pay
             Someone" button in the navigation menu at the bottom of the screen.
-            To get started as a beneficiary, head over to the "Collection"
+            To get started as a beneficiary or display your QR code, head over to the "Account"
             button in the navigation menu at the bottom of the screen.
           </p>
         </div>

@@ -32,7 +32,7 @@ else{
       case 0:
         return "Please scan a QR code below to continue.";
         case 1:
-          return "Please enter a beneficiary code below to continue.";
+          return "Please enter a beneficiary number below to continue.";
       default:
         return "Please scan a QR code below to continue.";
     }
@@ -41,11 +41,11 @@ else{
   const subTextToShow = () => {
     switch (defaultScreen) {
       case 0:
-        return "I want to enter a beneficiary code manually";
+        return "I want to enter a beneficiary number manually";
         case 1:
           return "I want to scan a QR code";
       default:
-        return "I want to enter a beneficiary code manually";
+        return "I want to enter a beneficiary number manually";
     }
   };
 
