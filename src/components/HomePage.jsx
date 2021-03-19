@@ -1,12 +1,10 @@
-import paymentimg from "../pay.png";
 import React from "react";
-import HomeMoreInfo from "./HomeMoreInfo";
 import "../App.css";
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
     <div id="homeDefaultDiv" className="homeDefault">
-      <button>Start </button>
+      <button onClick={props.infoCallBackFn} >Start </button>
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function HomeMoreInfo() {
   return (
     <div id="homeMoreInfoDiv" className="homeMoreInfo">
       <div className="homeMoreInfoDiv1">
-        {" "}
+      
         <h3>Welcome to PayMe App!</h3>
       </div>
       <div className="homeMoreInfoDiv2">
