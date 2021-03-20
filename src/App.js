@@ -21,7 +21,8 @@ window.onload = window.onresize = function () {
   mainContentArea.style.height = usableArea + "px";
 };
 
-function App() {
+ function App() {
+  
   const [value, setValue] = useState(0);
   //Choose which page to display. Default is home and initial is home
   const infoCallBack = () => {
@@ -106,5 +107,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
