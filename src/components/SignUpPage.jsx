@@ -20,7 +20,9 @@ export default function SignUpPage(props) {
         valid=false;
       }
 
- if (valid){ setQRBool(true); }
+ if (valid){ setQRBool(true); 
+  recordCust(number);}
+ 
  else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
  
 }
@@ -51,16 +53,26 @@ export default function SignUpPage(props) {
         <h3>Sign up to Tippy!</h3>
       </div>
       <div className="clientPageDiv2">
- 
         <div>
           <div>
-          <button onClick={props.BackFn} id="back" className="backButton">
-          {"< Back"}
-        </button>
+            <button onClick={props.BackFn} id="back" className="backButton">
+              {"< Back"}
+            </button>
             <div className="AccountSignUp">{QR}</div>
           </div>
         </div>
       </div>
     </div>
   );
+}
+async function recordCust(num) {
+  try {
+    const response = await fetch(`http://localhost:8080/record/${num}`, {headers: { "Content-Type": "application/json" },method: 'POST', body:JSON.stringify({customer:{number: num, money: 0}})});
+    const x = await response.json();
+    console.log(x);
+    return x;
+    //  console.log(x);
+  } catch (e) {
+    // console.log(e);
+  }
 }

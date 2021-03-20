@@ -32,7 +32,7 @@ export default function PaymentPage(props) {
       case 1:
         return <ManualBeneficiary setNextPage={setValue} />;
       case 2:
-        return <PaymentConfirmation setNextPage={setValue}  money={money}/>;
+        return <PaymentConfirmation phone={qrScan} setNextPage={setValue}  money={money}/>;
       case 3:
         return <QuickPayment setMoney={setMoney} setNextPage={setValue} />;
       case 4:
