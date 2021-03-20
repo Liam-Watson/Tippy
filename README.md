@@ -7,17 +7,21 @@
 
 > * Import all the files
 > * `npm install`
-> * `npm start`
+> * `npm start`  
+
 **Frameworks used:**  
 
 > * React.js
-> * Node.js
+> * Node.js  
+
 **Technologies used:**  
 
-> * HTML and CSS
+> * HTML and CSS  
+
 **Libraries used:**  
 
-> * MaterialUI
+> * MaterialUI  
+
 **API's used:**  
 
 > * YOCO Payment api
