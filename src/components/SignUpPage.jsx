@@ -15,7 +15,10 @@ export default function SignUpPage(props) {
             valid = false
         }
       }
- if (valid){ setQRBool(true); }
+ if (valid){ 
+  recordCust(number);
+   setQRBool(true); 
+  }
  else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
  
 }
