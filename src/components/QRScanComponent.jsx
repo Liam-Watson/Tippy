@@ -3,6 +3,29 @@ import "../App.css";
 
 export default function QRScanComponent(props) {
   //Essentially Yoink from with a few changes :) : https://codesandbox.io/s/qr-code-scanner-ilrm9?file=/index.html
+
+
+  function checkInp(number){
+
+    var valid = true
+    var i;
+
+    for (i = 0; i < number.length; i++) {
+      if(number[i] < "0"|| number[i] > "9"){
+          valid = false
+      }
+    }
+
+    if (number.length!=10){
+      valid=false;
+    }
+
+if (valid){ return true;}
+
+else{ return false;}
+
+}
+
   useEffect(() => {
     const qrcode = window.qrcode;
 
@@ -17,7 +40,15 @@ export default function QRScanComponent(props) {
     qrcode.callback = (res) => {
       if (res) {
         props.setQrScan(res);
-        props.setScreenValue(3);
+        if (checkInp(res)){
+          props.setScreenValue(3);
+        }
+        else{
+          alert('Invalid QR Code: '+res+", please scan a valid beneficiary QR Code to proceed.");
+          res="";
+          onclick();
+        }
+        
         outputData.innerText = res;
         scanning = false;
         video.srcObject.getTracks().forEach((track) => {
@@ -30,6 +61,7 @@ export default function QRScanComponent(props) {
     };
 
     const onclick = () => {
+      
       navigator.mediaDevices
         .getUserMedia({ video: { facingMode: "environment" } })
         .then(function (stream) {

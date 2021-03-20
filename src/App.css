@@ -383,3 +383,16 @@ h1 {
 .qrBorderRound{
   border-radius: 15px;
 }
+
+.terminationStyle{
+  position: absolute;
+  height: 100%;
+  width:100%;  
+}
+
+.successFailure{
+  font-size: 180px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  line-height: 60%;
+}
