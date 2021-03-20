@@ -36,7 +36,7 @@ export default function PaymentPage(props) {
       case 3:
         return <QuickPayment setMoney={setMoney} getMoney={money} setNextPage={setValue} />;
       case 4:
-        return <ManualPayment setMoney={setMoney} getMoney={money}  setNextPage={setValue} />;
+        return <ManualPayment setPhone={setQrScan} setMoney={setMoney} getMoney={money}  setNextPage={setValue} />;
       default:
         return <QRScan setQrScan={setQrScan} setScreenValue={setValue}/>;
     }
