@@ -10,6 +10,7 @@ export default function PaymentPage(props) {
   const [defaultScreen, setValue] = useState(0);
   const [qrScan, setQrScan] = useState(-1);
   const [money, setMoney] = useState(0);
+  const [tokenized, setTokenizedBool] = useState(false);
 
 
   const setPageOnClick = (pgNum) => {

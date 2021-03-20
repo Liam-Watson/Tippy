@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import PaymentTermination from "./paymentTermination";
 
 export default function Yoco(props) {
+  const [tokenSuccess, setTokenSuccess] = useState(false);
   var yoco = new window.YocoSDK({
     publicKey: "pk_test_ed3c54a6gOol69qa7f45",
   });
@@ -30,8 +32,6 @@ function helperFn(yoco, money, phone) {
           console.log("error occured: " + errorMessage);
           
         } else {
-          console.log(result);
-          console.log(money)
           publicPayment(result, money);
           console.log("card successfully tokenised: " + result.id);
           upBal(phone, money*100)
