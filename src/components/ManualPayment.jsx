@@ -18,6 +18,9 @@ export default function ManualPayment(props) {
       <button className="paymentButton" onClick={() => props.setNextPage(2)}>
         Proceed{" "}
       </button>
+      <button onClick={()=>props.setNextPage(3)} id="back" className="backButton">
+          {"< Back"}
+        </button>
     </div>
   );
 }

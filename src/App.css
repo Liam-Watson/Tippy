@@ -1,14 +1,4 @@
-@media (max-width: 992px){
-  .homeDefault{
-    background-image: url('volunteers.jpg');
-  }
-}
 
-@media (min-width: 992px){
-  .homeDefault{
-    background-image: url('volunteers_wide.png');
-  }
-}
 
 @font-face{
   font-family: "Coves";
@@ -21,14 +11,14 @@
 }
 
 :root {
-  --SweatyMainColor: rgb(55, 55, 161);
+  --SweatyMainColor: rgb(26, 98, 180);
   --SweatyContrastColor: white;
   --SweatyFontBold: "CovesBold";
   --SweatyFont: "Coves";
 }
 
 .pageTitle{
-  z-index: 10;
+  z-index: 99;
   color: var(--SweatyContrastColor);
   padding: 20px 0px 20px 0px;
   text-align: center;
@@ -47,6 +37,8 @@ display: grid;
 }
 
 .homeDefault{
+  background-image: url('tip2.gif');
+  z-index: 0;
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -69,10 +61,11 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
+z-index: 0;
 }
 
 .homeMoreInfoDiv2{
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.226);
 background-color: var(--SweatyMainColor);
 color: var(--SweatyContrastColor);
 height:85%;
@@ -364,7 +357,7 @@ h1 {
   height: 10em;
   padding: 15px;
   margin: 15px;
-  background: white;
+  
 }
 
 #qr-result {
@@ -372,8 +365,10 @@ h1 {
   margin: 20px auto;
   padding: 20px;
   max-width: 700px;
-  background-color: white;
 }
 
 /* QR Section*/
 
+.shadowHome{
+  box-shadow: 0px 6px 14px 0px rgb(0, 0, 0);
+}
