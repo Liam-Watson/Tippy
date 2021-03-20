@@ -6,6 +6,10 @@ export default function RetrieveQRCode(props) {
   const [number, setNumber] = useState("0000000000");
   const [qrBool, setQRBool] = useState(false);
   const QR = qrBool ? (
+
+
+
+
     <QRDisplay number={number} />
   ) : (
     <div>
@@ -18,18 +22,37 @@ export default function RetrieveQRCode(props) {
       ></input>
       <br></br>
       <br></br>
-      <button onClick={() => setQRBool(true)} className="paymentButton">
+      <button onClick={() => checkInp()} className="paymentButton">
         Retrieve QR Code
       </button>
     </div>
   );
+
+
+  function checkInp(){
+
+    var valid = true
+    var i;
+
+    for (i = 0; i < number.length; i++) {
+      if(number[i] < "0"|| number[i] > "9"){
+          valid = false
+      }
+    }
+if (valid){ setQRBool(true); }
+else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
+
+}
+
+
   return (
     <div className="clientStartPageCont">
       <div className="clientPageDiv1">
+        
         <button onClick={props.BackFn} id="back" className="backButton">
           {"< Back"}
         </button>
-        <h3>Please sign up below</h3>
+        <h3>Retrieve your QR Code </h3>
       </div>
       <div className="clientPageDiv2">
         <div>

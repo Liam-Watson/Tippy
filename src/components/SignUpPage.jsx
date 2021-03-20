@@ -4,6 +4,22 @@ import QRDisplay from "./QrGenerator";
 export default function SignUpPage(props) {
   const [number, setNumber] = useState("0000000000");
   const [qrBool, setQRBool] = useState(false);
+
+  function checkInp(){
+
+      var valid = true
+      var i;
+
+      for (i = 0; i < number.length; i++) {
+        if(number[i] < "0"|| number[i] > "9"){
+            valid = false
+        }
+      }
+ if (valid){ setQRBool(true); }
+ else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
+ 
+}
+
   const QR = qrBool ? (
     <QRDisplay number={number} />
   ) : (
@@ -18,7 +34,7 @@ export default function SignUpPage(props) {
       ></input>
       <br></br>
       <br></br>
-      <button onClick={() => setQRBool(true)} className="paymentButton">
+      <button onClick={() =>  checkInp()} className="paymentButton">
         Sign up
       </button>
     </div>
@@ -27,7 +43,7 @@ export default function SignUpPage(props) {
     <div className="clientStartPageCont">
       <div className="clientPageDiv1">
     
-        <h3>Please sign up below</h3>
+        <h3>Sign up to Tippy!</h3>
       </div>
       <div className="clientPageDiv2">
  
