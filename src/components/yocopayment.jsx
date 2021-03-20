@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import PaymentTermination from "./paymentTermination";
 
 export default function Yoco(props) {
-  const [tokenSuccess, setTokenSuccess] = useState(false);
   var yoco = new window.YocoSDK({
     publicKey: "pk_test_ed3c54a6gOol69qa7f45",
   });
   useEffect(() => {
-    helperFn(yoco, props.money, props.phone);
+    helperFn(yoco, props.money, props.phone, props.setToken);
   }, []);
   return (
     <div>
@@ -16,7 +15,7 @@ export default function Yoco(props) {
   );
 }
 
-function helperFn(yoco, money, phone) {
+function helperFn(yoco, money, phone, setToken) {
   let checkoutButton = document.querySelector("#checkout-button");
   checkoutButton.addEventListener("click", function () {
     yoco.showPopup({
@@ -28,13 +27,14 @@ function helperFn(yoco, money, phone) {
         // This function returns a token that your server can use to capture a payment
         if (result.error) {
           const errorMessage = result.error.message;
-          console.log(money)
+          console.log(money);
           console.log("error occured: " + errorMessage);
-          
+          setToken(1);
         } else {
           publicPayment(result, money);
           console.log("card successfully tokenised: " + result.id);
-          upBal(phone, money*100)
+          upBal(phone, money*100);
+          setToken(2);
         }
         // In a real integration - you would now pass this chargeToken back to your
         // server along with the order/basket that the customer has purchased.
