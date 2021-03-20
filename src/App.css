@@ -312,10 +312,10 @@ p{
 
 .backButton{
   position: absolute;
-  border-color: white;
+  color: var(--SweatyMainColor);
   border-width: 1px;
   border-style: solid;
-  background-color: var(--SweatyMainColor);
+  background-color: white;
   height:30px;
   padding:0px 10px 0px 3px;
   left: 0px;
