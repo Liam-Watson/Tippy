@@ -30,7 +30,7 @@ export default function PaymentPage(props) {
       case 0:
         return <QRScan setQrScan={setQrScan} setScreenValue={setValue} />;
       case 1:
-        return <ManualBeneficiary setNextPage={setValue} />;
+        return <ManualBeneficiary setPhone={setQrScan} setNextPage={setValue} />;
       case 2:
         return <PaymentConfirmation phone={qrScan} setNextPage={setValue}  money={money}/>;
       case 3:
