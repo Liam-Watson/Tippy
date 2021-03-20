@@ -3,18 +3,23 @@
 
 > Demo Video: https://youtu.be/jJdimb6ootE  
 
-**How to run:**
+**How to run:**  
+
 > * Import all the files
 > * `npm install`
 > * `npm start`
-**Frameworks used:**
+**Frameworks used:**  
+
 > * React.js
 > * Node.js
-**Technologies used:**
+**Technologies used:**  
+
 > * HTML and CSS
-**Libraries used:**
+**Libraries used:**  
+
 > * MaterialUI
-**API's used:**
+**API's used:**  
+
 > * YOCO Payment api
 > * QR Code scanner api
 > * Google QR Code scanner api
