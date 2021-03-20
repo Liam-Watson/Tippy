@@ -34,6 +34,7 @@ function helperFn(yoco, money) {
           console.log(money)
           publicPayment(result, money);
           alert("card successfully tokenised: " + result.id);
+          upBal(money*100)
         }
         // In a real integration - you would now pass this chargeToken back to your
         // server along with the order/basket that the customer has purchased.
@@ -86,4 +87,15 @@ async function publicPayment(tokenization, money) {
   const response = await fetch(settings);
   // const jsonResponse = await JSON.stringify(response);
   console.log(response);
+}
+async function upBal(id, num) {
+  try {
+    const response = await fetch(`http://localhost:8080/record/${id}`, {headers: { "Content-Type": "application/json" },method: 'POST', body:JSON.stringify({money: num})});
+    const x = await response.json();
+    console.log(x);
+    return x;
+    //  console.log(x);
+  } catch (e) {
+    // console.log(e);
+  }
 }

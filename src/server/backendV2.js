@@ -28,6 +28,24 @@ app.post('/record/:number', (req, res) => {
     )
 })
 
+app.post('/updateBal/:number', (req, res) => {
+    console.log(req)
+    const {number} = req.params;
+    const {money} = req.body.money;
+    // const number = cust.customer.number;
+    // const money = cust.customer.money
+    updateBal(number, money)
+    console.log(number)
+    if(!number ){
+        res.status(418).send({message: "Invalid data :("});
+    }
+    res.send({
+        customer: `customer with number ${number}`,
+    }
+    
+    )
+})
+
 app.get('/fuck', (req, res) => {
     res.status(200).send(
         {fuck: "fuck",}
