@@ -12,7 +12,7 @@ export default function PaymentConfirmation(props) {
     }
   }, [token])
   return (
-    bool ? <PaymentTermination bool={bool} money={props.money} phone={props.money}/> : (<div id="paymentScreen1Div" className="paymentScreen1">
+    bool ? <PaymentTermination bool={bool} money={props.money} phone={props.phone}/> : (<div id="paymentScreen1Div" className="paymentScreen1">
          <button onClick={()=>props.setNextPage(3)} id="back" className="backButton">
           {"< Back"}
         </button>
