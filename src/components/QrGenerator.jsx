@@ -9,15 +9,18 @@ document.getElementById("share").style.visibility="hidden";
 document.getElementById("shareButtons").style.visibility="visible";
     }
 
+    
+
     return <div>
        
-<img alt="" src={`https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${props.number}`}/>
+<img alt="" className="qrBorderRound"src={`https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${props.number}`}/>
 <div >
-  <a href={"https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${props.number}"} target="_blank">
+  <a  href={"https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=${props.number}"} download="myQRCode">
  <div className="shareButton">
 <GetAppIcon ></GetAppIcon>
 </div>
 </a>
+
 </div>
 </div>
 

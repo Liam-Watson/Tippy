@@ -3,7 +3,7 @@ import "../App.css";
 import QRDisplay from "./QrGenerator";
 
 export default function RetrieveQRCode(props) {
-  const [number, setNumber] = useState("0000000000");
+  const [number, setNumber] = useState("0");
   const [qrBool, setQRBool] = useState(false);
   const QR = qrBool ? (
 
@@ -39,6 +39,11 @@ export default function RetrieveQRCode(props) {
           valid = false
       }
     }
+
+    if (number.length!=10){
+      valid=false;
+    }
+
 if (valid){ setQRBool(true); }
 else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
 

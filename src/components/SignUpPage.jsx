@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import QRDisplay from "./QrGenerator";
 export default function SignUpPage(props) {
-  const [number, setNumber] = useState("0000000000");
+  const [number, setNumber] = useState("0");
   const [qrBool, setQRBool] = useState(false);
 
   function checkInp(){
@@ -15,6 +15,11 @@ export default function SignUpPage(props) {
             valid = false
         }
       }
+
+      if (number.length!=10){
+        valid=false;
+      }
+
  if (valid){ setQRBool(true); }
  else{ alert("Please enter a valid ten digit phone number into the text box to proceed");}
  
