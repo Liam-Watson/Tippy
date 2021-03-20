@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../App.css";
 
 export default function QRScanComponent(props) {
@@ -41,6 +41,12 @@ else{ return false;}
       if (res) {
         props.setQrScan(res);
         if (checkInp(res)){
+          scanning = false;
+          video.srcObject.getTracks().forEach((track) => {
+            track.stop();
+          });
+              qrResult.hidden = false;
+        canvasElement.hidden = true;
           props.setScreenValue(3);
         }
         else{
