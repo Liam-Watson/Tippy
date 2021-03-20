@@ -1,3 +1,28 @@
+# Yoco Hackathon Tippy App
+> Link (Mobile Only): https://tippybysweaty.web.app/
+> Demo Video: https://youtu.be/jJdimb6ootE
+**How to run:**
+> * Import all the files
+> * `npm install`
+> * `npm start`
+**Frameworks used:**
+> * React.js
+> * Node.js
+**Technologies used:**
+> * HTML and CSS
+**Libraries used:**
+> * MaterialUI
+**API's used:**
+> * YOCO Payment api
+> * QR Code scanner api
+> * Google QR Code scanner api
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
