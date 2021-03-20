@@ -11,7 +11,7 @@ app.use(express.json())
 //     res.send('Hello World!');
 //   });
 app.post('/record/:number', (req, res) => {
-    console.log(req)
+    //console.log(req)
     const {number} = req.params;
     const {cust} = req.body;
     // const number = cust.customer.number;
@@ -22,25 +22,30 @@ app.post('/record/:number', (req, res) => {
         res.status(418).send({message: "Invalid data :("});
     }
     res.send({
-        customer: `customer with number ${number}`,
+        customer: `customer with number ${number} with balance ${getBal(number)}`,
     }
     
     )
 })
 
 app.post('/updateBal/:number', (req, res) => {
-    console.log(req)
+    //console.log(req)
     const {number} = req.params;
-    const {money} = req.body.money;
+    const {money} = req.body;
+    // console.log(req.body.money)
+    // console.log(money)
+    // console.log(req.body)
     // const number = cust.customer.number;
     // const money = cust.customer.money
-    updateBal(number, money)
     console.log(number)
+    console.log(money)
+    updateBal(number, money)
+    
     if(!number ){
         res.status(418).send({message: "Invalid data :("});
     }
     res.send({
-        customer: `customer with number ${number}`,
+        customer: `customer with number ${number} with balance ${getBal(number)}`,
     }
     
     )

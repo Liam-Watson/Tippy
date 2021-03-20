@@ -5,7 +5,7 @@ export default function Yoco(props) {
     publicKey: "pk_test_ed3c54a6gOol69qa7f45",
   });
   useEffect(() => {
-    helperFn(yoco, props.money);
+    helperFn(yoco, props.money, props.phone);
   }, []);
   return (
     <div>
@@ -14,7 +14,7 @@ export default function Yoco(props) {
   );
 }
 
-function helperFn(yoco, money) {
+function helperFn(yoco, money, phone) {
   let checkoutButton = document.querySelector("#checkout-button");
   checkoutButton.addEventListener("click", function () {
     yoco.showPopup({
@@ -27,14 +27,14 @@ function helperFn(yoco, money) {
         if (result.error) {
           const errorMessage = result.error.message;
           console.log(money)
-          alert("error occured: " + errorMessage);
+          console.log("error occured: " + errorMessage);
           
         } else {
           console.log(result);
           console.log(money)
           publicPayment(result, money);
-          alert("card successfully tokenised: " + result.id);
-          upBal(money*100)
+          console.log("card successfully tokenised: " + result.id);
+          upBal(phone, money*100)
         }
         // In a real integration - you would now pass this chargeToken back to your
         // server along with the order/basket that the customer has purchased.
@@ -90,7 +90,7 @@ async function publicPayment(tokenization, money) {
 }
 async function upBal(id, num) {
   try {
-    const response = await fetch(`http://localhost:8080/record/${id}`, {headers: { "Content-Type": "application/json" },method: 'POST', body:JSON.stringify({money: num})});
+    const response = await fetch(`http://localhost:8080/updateBal/${id}`, {headers: { "Content-Type": "application/json" },method: 'POST', body:JSON.stringify({money: num})});
     const x = await response.json();
     console.log(x);
     return x;
