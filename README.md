@@ -1,6 +1,8 @@
 # Yoco Hackathon Tippy App
-> Link (Mobile Only): https://tippybysweaty.web.app/
-> Demo Video: https://youtu.be/jJdimb6ootE
+> Link (Mobile Only): https://tippybysweaty.web.app/  
+
+> Demo Video: https://youtu.be/jJdimb6ootE  
+
 **How to run:**
 > * Import all the files
 > * `npm install`
