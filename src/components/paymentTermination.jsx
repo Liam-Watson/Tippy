@@ -10,8 +10,8 @@ export default function PaymentTermination(props) {
 // props.phone
 // var success = success of transaction as processed by Yoco API, prop Amt in Success refers to the amount paid, prop BeneficiaryNum in Success refers to the beneficiary paid to 
 function contentToDisplay(){
-    if (success){
-        return <Success Amt="R259" BeneficiaryNum="0839571821"></Success>;
+    if (props.bool){
+        return <Success Amt={"R"+props.money} BeneficiaryNum={props.phone} ></Success>;
     }
     else{
         return <Failure></Failure>;
@@ -20,10 +20,10 @@ function contentToDisplay(){
 
   return (
     <div className="terminationStyle">
-      <div className="homeMoreInfoDiv1">
+      <div className="term1">
 <h3>Transaction Summary</h3>
     </div>
-    <div className="homeMoreInfoDiv2">
+    <div className="term2">
       <div>
        {contentToDisplay()}
       </div>
