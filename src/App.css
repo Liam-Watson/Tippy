@@ -317,8 +317,11 @@ p{
   border-style: solid;
   background-color: var(--SweatyMainColor);
   height:30px;
-  padding:0px 10px 0px 10px;
-  left: 5px;
+  padding:0px 10px 0px 3px;
+  left: 0px;
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   bottom:15px;
   font-size: 15px;
 }
