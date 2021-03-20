@@ -11,11 +11,10 @@ export default function PaymentPage(props) {
   const [qrScan, setQrScan] = useState(-1);
   const [money, setMoney] = useState(0);
 
+
   const setPageOnClick = (pgNum) => {
     setValue(pgNum);
   };
-
-
 
   function changeScreen() {
     if (defaultScreen === 1) {
@@ -34,9 +33,9 @@ export default function PaymentPage(props) {
       case 2:
         return <PaymentConfirmation phone={qrScan} setNextPage={setValue}  money={money}/>;
       case 3:
-        return <QuickPayment setMoney={setMoney} setNextPage={setValue} />;
+        return <QuickPayment setMoney={setMoney} getMoney={money} setNextPage={setValue} />;
       case 4:
-        return <ManualPayment setMoney={setMoney}  setNextPage={setValue} />;
+        return <ManualPayment setMoney={setMoney} getMoney={money}  setNextPage={setValue} />;
       default:
         return <QRScan setQrScan={setQrScan} setScreenValue={setValue}/>;
     }

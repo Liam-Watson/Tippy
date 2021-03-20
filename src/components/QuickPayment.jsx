@@ -8,6 +8,15 @@ const PAY20 = 20;
 const PAY50 = 50;
 
 export default function QuickPayment(props) {
+
+  function checkAmountGZero(){
+    if (props.getMoney>2){
+      return props.setNextPage(2);
+    }
+    else{
+      alert("Please select an amount to pay greater than R2");
+    }
+  }
   return (
     <div>
       <button onClick={() => props.setMoney(5)} className="quickPaymentButton">R{PAY5}</button>
@@ -15,7 +24,7 @@ export default function QuickPayment(props) {
       <button onClick={() => props.setMoney(20)} className="quickPaymentButton">R{PAY20}</button>
       <button onClick={() => props.setMoney(50)} className="quickPaymentButton">R{PAY50}</button><br></br>
       <button onClick={() => props.setNextPage(4)} className="manualEntryQuickyPay">I want to choose a custom amount</button>
-      <button className="paymentButton" onClick={() => {props.setNextPage(2)}}>
+      <button className="paymentButton" onClick={() => {checkAmountGZero()}}>
             Proceed
           </button>
           <button onClick={()=>props.setNextPage(0)} id="back" className="backButton">
