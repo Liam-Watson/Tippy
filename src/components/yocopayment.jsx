@@ -5,7 +5,7 @@ export default function Yoco(props) {
     publicKey: "pk_test_ed3c54a6gOol69qa7f45",
   });
   useEffect(() => {
-    helperFn(yoco);
+    helperFn(yoco, props.money);
   }, []);
   return (
     <div>
@@ -14,11 +14,11 @@ export default function Yoco(props) {
   );
 }
 
-function helperFn(yoco) {
+function helperFn(yoco, money) {
   let checkoutButton = document.querySelector("#checkout-button");
   checkoutButton.addEventListener("click", function () {
     yoco.showPopup({
-      amountInCents: 2799,
+      amountInCents: money*100,
       currency: "ZAR",
       name: ": Tippy payment",
       description: "Cashless Payments - made simple.",
@@ -26,10 +26,13 @@ function helperFn(yoco) {
         // This function returns a token that your server can use to capture a payment
         if (result.error) {
           const errorMessage = result.error.message;
+          console.log(money)
           alert("error occured: " + errorMessage);
+          
         } else {
           console.log(result);
-          publicPayment(result);
+          console.log(money)
+          publicPayment(result, money);
           alert("card successfully tokenised: " + result.id);
         }
         // In a real integration - you would now pass this chargeToken back to your
@@ -39,7 +42,7 @@ function helperFn(yoco) {
   });
 }
 
-async function publicPayment(tokenization) {
+async function publicPayment(tokenization, money) {
   //     curl https://online.yoco.com/v1/charges/ \
   //   -u sk_test_960bfde0VBrLlpK098e4ffeb53e1: \
   //   -d token=tok_test_DjaqoUgmzwYkwesr3euMxyUV4g \
@@ -60,7 +63,7 @@ async function publicPayment(tokenization) {
     },
     data: {
       token: tokenization.id,
-      amountInCents: "2799",
+      amountInCents: money + "",
       currency: "ZAR",
     },
   };

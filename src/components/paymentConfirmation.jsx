@@ -19,7 +19,7 @@ export default function PaymentConfirmation(props) {
             <br/>
             Enjoy the seamless card payment provided by the amazing Yoco.
           </p>
-          <Yoco></Yoco>
+          <Yoco money={props.money}></Yoco>
         </div>
       </div>
 
